@@ -1,0 +1,17 @@
+<!--pages/readhistory/readhistory.wxml-->
+
+<view class="history">
+  <view wx:if="{{0<history.content.length}}">
+    <block wx:for-items="{{history.content}}" wx:key="id" >
+      <view class="history-items" bindtap="toContent" data-obj="{{history.content[index]}}">
+        <view class="history-items-left">{{history.content[index].title}}</view>
+        <view class="history-items-right">浏览时间：{{history.content[index].createTime}}</view>
+      </view>
+    </block>
+  </view>
+  <view>
+    <view>
+      当前页：{{history.totalPages}}
+    </view>
+  </view>
+</view>

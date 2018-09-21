@@ -1,0 +1,72 @@
+/* pages/me/me.wxss */
+.container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+/*上方用户信息*/
+.userinfo {
+	display: flex;
+	flex-direction: column;
+	padding: 45rpx 0;
+	align-items: center;
+	background: #e85654;
+  width: 750rpx;
+}
+.userinfo-avatar {
+	width: 160rpx;
+	height: 160rpx;
+	margin: 20rpx;
+	border-radius: 50%;
+}
+.userinfo-nickname {
+  margin-top: 20rpx;
+  color: #FFF;
+}
+/* 签到成功*/
+.successqd {  
+  position: fixed;  
+  top: 50%; 
+  left: 50%;
+  width: 550rpx;
+  margin-left: -275rpx;
+  margin-top: -200rpx;
+  background-color:white;
+  border-radius: 6rpx;
+  border: 2rpx solid #54ff9c;
+  text-align: center;
+}
+/*签到按钮*/
+.qdbutton{
+  height:80rpx;
+  width: 250rpx;
+  margin-top: -95rpx;
+  margin-right:70rpx;
+  font-size:16px; 
+}
+/*中部列表*/
+.my-item{
+  width: 100%;
+  background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+  background-size: 16rpx auto,750rpx auto;
+  margin: 20rpx 0; 
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 100rpx;
+}
+/*底部列表*/
+.line{
+  height:20rpx;
+  background: #eee;
+  width:100%;
+}
+.about{
+  width: 100%;
+  background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+  background-size: 16rpx auto,750rpx auto;
+  margin: 20rpx 0; 
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 100rpx;
+}

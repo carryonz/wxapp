@@ -1,0 +1,26 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+	<view class="userinfo" bindtap="userInfo">
+	  <image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+	</view>
+  <view class="line"></view>
+  <view class="my-item">
+    <view>当前积分 {{nowIntegral}} </view>
+    <button wx:if="{{!isQd}}" class='qdbutton' bindtap="scoresign">每日签到</button>
+    <button wx:if="{{isQd}}" class='qdbutton' >已签到</button>
+  </view>
+  <view class="my-item" bindtap="toBackpack">我的背包</view>
+  <view class="my-item" bindtap="toHistory">阅读历史</view>
+  <view wx:if="{{!userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号码</button>
+  </view>
+  <view wx:if="{{userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+    {{userMobile}}
+  </view>
+  <!-- <span style="font-size:14px;"><button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号码</button></span> -->
+  <view class="line"></view>
+  <view class="about" bindtap="aboutUs">
+    关于我们
+  </view>
+</view>

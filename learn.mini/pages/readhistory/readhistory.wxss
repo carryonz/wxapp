@@ -1,0 +1,25 @@
+/* pages/readhistory/readhistory.wxss */
+.history{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+/*列表*/
+.history-items{
+  width: 100%;
+  margin: 20rpx 0; 
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 10rpx;
+  font-size: 12px;
+}
+/*列表左侧*/
+.history-items-left{
+  float: left;
+}
+/*列表右侧*/
+ .history-items-right{
+  margin-right: 20rpx;
+  float: right;
+} 

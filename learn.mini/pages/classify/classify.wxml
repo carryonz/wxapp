@@ -1,0 +1,45 @@
+<!--page/one/index.wxml-->
+<view class="page">
+  <!-- 左侧列表 -->
+  <view class="page-bottom">
+    <view class="page-class-list">
+      <view wx:if="{{classtype[0]}}"> 
+        <block wx:for-items="{{classtype}}" wx:key="id" >
+          <view class="wc" id="{{classtype[index].id}}" bindtap="goToClass">
+            <text>{{classtype[index].classname}}</text>
+          </view>
+        </block>
+      </view>
+      <view  wx:else class="wc">
+        无科目
+      </view>
+    </view>
+  </view>
+  <!-- 右侧 -->
+  <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start"
+   class="page-top {{open ? 'c-state1' : ''}}" style='background:{{ firstColor }}'>
+    <image class="page-top-class" bindtap="tap_ch_class" src="../../images/btn.png"></image>
+    <view class="page-top-style" bindtap="clickColor">{{firstName}}
+      <image class="{{selectArea ? 'rotateRight' :''}}" src="../../images/arrow-right.png"></image>
+      <view class="style_select" hidden="{{selectStyle}}">
+        <view wx:if="{{styletype[0]}}" class="page-content">
+          <block wx:for-items="{{styletype}}" wx:key="id" >
+            <view class="select_one" bindtap="mySelect" data-obj="{{styletype[index]}}">{{styletype[index].name}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="page-content">
+      <view wx:if="{{content[0]}}">
+        <text>科目:{{classtype[content[0].type].classname}}</text>
+        <block wx:for-items="{{content}}" wx:key="id" >
+          <view class="page-content-list" bindtap="toContent" data-obj="{{content[index]}}">
+            <text>作者：{{content[index].teacherName}}</text>
+            <text class="page-content-right">创建时间：{{content[index].createTime}}</text>
+            <text class="page-content-omit">{{content[index].title}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

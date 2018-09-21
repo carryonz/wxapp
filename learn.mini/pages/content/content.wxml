@@ -1,0 +1,6 @@
+<!--pages/content/content.wxml-->
+<view class="page" style='background:{{ firstColor }}'>
+  <text>
+    {{ content.content }}
+  </text>
+</view>
